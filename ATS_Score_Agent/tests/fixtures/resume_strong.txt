@@ -1,0 +1,19 @@
+Alex Rivera
+alex@example.com | 555-010-0199 | Remote
+Senior Backend Engineer | Software Engineer
+
+Summary
+Software engineer with 6+ years building Python APIs on AWS.
+
+Skills
+Python, FastAPI, PostgreSQL, AWS, Docker, Kubernetes, REST, CI/CD, Terraform, Kafka, GraphQL
+
+Experience
+Backend Engineer, Northwind
+- Cut API p95 latency 35% by adding Redis caching on the FastAPI checkout path
+- Migrated 12 services to Kubernetes on AWS, reducing deploy time 40%
+- Designed PostgreSQL schemas serving 2 million monthly users
+- Built CI/CD pipelines with GitHub Actions and Docker
+
+Education
+Bachelor of Science, Computer Science, State University

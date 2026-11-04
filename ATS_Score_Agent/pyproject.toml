@@ -1,0 +1,26 @@
+[project]
+name = "ats-score-agent"
+version = "0.1.0"
+description = "Score a resume against a job description and recommend ATS-focused edits."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "python-docx>=1.1.2",
+    "python-multipart>=0.0.12",
+    "pypdf>=5.1.0",
+    "uvicorn>=0.32.0",
+]
+
+[project.scripts]
+ats-score-agent = "ats_score_agent.app:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "httpx>=0.27.0",
+]

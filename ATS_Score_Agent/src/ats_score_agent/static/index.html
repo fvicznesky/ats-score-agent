@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ATS Score Agent</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <p class="eyebrow">Local · No account · Keyword-faithful scoring</p>
+        <h1>ATS Score Agent</h1>
+        <p class="lede">
+          Feed a resume and a job description. Get a transparent match score and the
+          edits most likely to push you to <strong>90%+</strong>.
+        </p>
+      </header>
+
+      <form id="score-form" class="grid">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Resume</h2>
+            <label class="file-btn">
+              Upload
+              <input id="resume-file" type="file" accept=".txt,.md,.pdf,.docx" />
+            </label>
+          </div>
+          <textarea
+            id="resume-text"
+            name="resume_text"
+            placeholder="Paste resume text, or upload .txt / .pdf / .docx"
+            required
+          ></textarea>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Job description</h2>
+            <label class="file-btn">
+              Upload
+              <input id="job-file" type="file" accept=".txt,.md,.pdf,.docx" />
+            </label>
+          </div>
+          <textarea
+            id="job-text"
+            name="job_text"
+            placeholder="Paste the job posting"
+            required
+          ></textarea>
+        </section>
+
+        <div class="actions">
+          <button type="submit" id="score-btn">Score resume</button>
+          <p id="form-error" class="error" hidden></p>
+        </div>
+      </form>
+
+      <section id="results" class="results" hidden>
+        <div class="score-row">
+          <div class="gauge" id="gauge">
+            <div class="gauge-value" id="score-value">0</div>
+            <div class="gauge-label">ATS score</div>
+          </div>
+          <div class="score-meta">
+            <p id="score-caption"></p>
+            <p id="projected"></p>
+            <p id="title-line"></p>
+          </div>
+        </div>
+
+        <div id="warnings" class="warnings" hidden></div>
+
+        <h3>Score breakdown</h3>
+        <div id="breakdown" class="breakdown"></div>
+
+        <div class="two-col">
+          <div>
+            <h3>Matched keywords</h3>
+            <div id="matched" class="chips"></div>
+          </div>
+          <div>
+            <h3>Missing required</h3>
+            <div id="missing" class="chips"></div>
+          </div>
+        </div>
+
+        <h3>Recommended changes</h3>
+        <ol id="recs" class="recs"></ol>
+      </section>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+Title: Senior Backend Engineer
+
+We are hiring a Senior Backend Engineer with 5+ years of experience building APIs.
+
+Required qualifications:
+- Python and FastAPI
+- PostgreSQL
+- AWS
+- Docker and Kubernetes
+- REST APIs
+- CI/CD
+- Bachelor's degree
+
+Preferred:
+- Terraform
+- Kafka
+- GraphQL
